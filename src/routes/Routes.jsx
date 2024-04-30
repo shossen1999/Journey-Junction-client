@@ -20,7 +20,7 @@ const router = createBrowserRouter([
         {
             path:"/",
             element:<Home></Home>,
-            loader:()=>fetch('http://localhost:5000/tourSpot')
+            loader:()=>fetch('https://journey-junction-server-gamma.vercel.app/tourSpot')
         },
         {
           path:"/login",
@@ -33,7 +33,7 @@ const router = createBrowserRouter([
         {
           path:"/allTouristsSpot",
           element:<AllTouristsSpot></AllTouristsSpot>,
-          loader:()=>fetch('http://localhost:5000/tourSpot')
+          loader:()=>fetch('https://journey-junction-server-gamma.vercel.app/tourSpot')
         },
         {
           path:"/addTouristsSpot",
@@ -42,12 +42,12 @@ const router = createBrowserRouter([
         {
           path:"/myList/:email",
           element:<PrivateRoute><MyList></MyList></PrivateRoute>,
-          loader:({params})=>fetch(`http://localhost:5000/tourSpot/user/${params.email}`)
+          loader:({params})=>fetch(`https://journey-junction-server-gamma.vercel.app/tourSpot/user/${params.email}`)
         },
         {
           path:"/spotDetails/:id",
           element:<PrivateRoute><SpotDetails></SpotDetails></PrivateRoute>,
-          loader:({params})=>fetch(`http://localhost:5000/tourSpot/${params.id}`)
+          loader:({params})=>fetch(`https://journey-junction-server-gamma.vercel.app/tourSpot/${params.id}`)
         },
         {
           path:"/updateSpot/:id",

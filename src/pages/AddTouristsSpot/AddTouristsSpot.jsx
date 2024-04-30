@@ -3,7 +3,7 @@ import useAuth from "../../hooks/useAuth";
 
 
 const AddTouristsSpot = () => {
-    const {user}=useAuth();
+    const { user } = useAuth();
     console.log(user);
     const handleAddTouristsSpot = event => {
         event.preventDefault();
@@ -21,12 +21,12 @@ const AddTouristsSpot = () => {
         const name = form.name.value;
         const short_description = form.short_description.value;
         // short_description
-        const newTourSpot = { tourists_spot_name, country_name, location, average_cost, seasonality, travel_time, photo,totalVisitorsPerYear,email ,name,short_description};
+        const newTourSpot = { tourists_spot_name, country_name, location, average_cost, seasonality, travel_time, photo, totalVisitorsPerYear, email, name, short_description };
         console.log(newTourSpot);
 
 
         // send data to the server 
-        fetch('http://localhost:5000/tourSpot', {
+        fetch('https://journey-junction-server-gamma.vercel.app/tourSpot', {
             method: 'POST',
             // ki dhoroner data send krbo tar jnno headers use krte hoy
             headers: {
@@ -45,7 +45,8 @@ const AddTouristsSpot = () => {
                         text: 'Tourist Spot Added Successfully',
                         icon: 'success',
                         confirmButtonText: 'Cool'
-                    })
+                    });
+                    // form.reset();
                 }
             })
 
@@ -59,20 +60,29 @@ const AddTouristsSpot = () => {
 
             <form onSubmit={handleAddTouristsSpot} className="card-body">
                 {/* form row1 */}
-                <div className="md:flex gap-5">
+                <div className="md:flex gap-5 ">
                     <div className="form-control md:w-1/2 ">
                         <label className="label">
                             <span className="label-text">Tourists Spot Name</span>
                         </label>
                         <input type="text" name="tourists_spot_name" placeholder="Tourists Spot Name" className="input input-bordered w-full" required />
                     </div>
-                    <div className="form-control md:w-1/2">
+                    <div className="form-control md:w-1/2 ">
                         <label className="label">
                             <span className="label-text">Country Name</span>
                         </label>
-                        <input type="text" name="country_name" placeholder="Country Name" className="w-full input input-bordered" required />
+                        <select className="select select-bordered" name="country_name"  required>
+                            <option disabled>Country</option>
+                            <option value="Bangladesh">Bangladesh</option>
+                            <option value="Indonesia">Indonesia</option>
+                            <option value="Vietnam">Vietnam</option>
+                            <option value="Thailand">Thailand</option>
+                            <option value="Malaysia">Malaysia</option>
+                            <option value="Cambodia">Cambodia</option>
+                        </select>
                     </div>
                 </div>
+
                 {/* form row2 */}
                 <div className="md:flex gap-5">
                     <div className="form-control md:w-1/2 ">
@@ -90,11 +100,16 @@ const AddTouristsSpot = () => {
                 </div>
                 {/* form row3 */}
                 <div className="md:flex gap-5">
-                    <div className="form-control md:w-1/2 ">
+                <div className="form-control md:w-1/2 ">
                         <label className="label">
                             <span className="label-text">Seasonality</span>
                         </label>
-                        <input type="text" name="seasonality" placeholder="Seasonality" className="input input-bordered w-full" required />
+                        <select className="select select-bordered" name="seasonality"  required>
+                            <option disabled>Seasonality</option>
+                            <option value="Summer">Summer</option>
+                            <option value="Winter">Winter</option>
+                            
+                        </select>
                     </div>
                     <div className="form-control md:w-1/2">
                         <label className="label">
@@ -141,9 +156,9 @@ const AddTouristsSpot = () => {
                         <label className="label">
                             <span className="label-text">Short Description</span>
                         </label>
-                        <textarea  name="short_description" placeholder="Short Description" className="input input-bordered w-full" required></textarea>
+                        <textarea name="short_description" placeholder="Short Description" className="input input-bordered w-full" required></textarea>
                     </div>
-                   
+
 
                 </div>
 

@@ -3,24 +3,28 @@ import CountryCard from "./CountryCard";
 
 
 const Country = () => {
-    const [country,setCountry]= useState([])
+    const [country, setCountry] = useState([])
 
-    useEffect(()=>{
-        fetch('http://localhost:5000/country')
-        .then(res =>res.json())
-        .then(data => {
-            console.log(data);
-            setCountry(data);
+    useEffect(() => {
+        fetch('https://journey-junction-server-gamma.vercel.app/country')
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                setCountry(data);
 
-        })
-    },[])
+            })
+    }, [])
     return (
         <div>
             <h2>Country Name:{country.length}</h2>
-            {
-                country.map(item => <CountryCard key={item._id} item={item}></CountryCard>)
-            }
-            
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-2">
+                {
+                    country.map(item => <CountryCard key={item._id} item={item}></CountryCard>)
+                }
+
+            </div>
+
+
         </div>
     );
 };

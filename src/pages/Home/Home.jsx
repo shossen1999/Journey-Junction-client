@@ -17,9 +17,9 @@ const Home = () => {
             <Country></Country>
 
             <div className="text-center mt-10 mb-10">
-                <h1 className="mb-5 text-[#030712] font-bold text-3xl">Our Categories</h1>
+                <h1 className="mb-5  font-bold text-3xl">Our Tourist Spots</h1>
                 <p className="md:w-[736px] lg:w-[736px] w-[500px] mx-auto">
-                    JourneyJunction, we specialize in turning houses into homes, and dreams into reality. Explore our listings and let us help you find your perfect nest
+                JourneyJunction , an innovative tourism website designed to be your ultimate companion in exploring the world's most captivating destinations. With a user-friendly interface and a wealth of information at your fingertips
                 </p>
             </div>
 

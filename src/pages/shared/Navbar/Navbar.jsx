@@ -1,12 +1,12 @@
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
-import { FaBuilding } from "react-icons/fa";
+
 import { useEffect, useState } from "react";
 
 const Navbar = () => {
-    const [theme,setTheme]=useState(localStorage.getItem("theme")? localStorage.getItem("theme") : "light");
-    const handleToggle =(e) =>{
-        if(e.target.checked){
+    const [theme, setTheme] = useState(localStorage.getItem("theme") ? localStorage.getItem("theme") : "light");
+    const handleToggle = (e) => {
+        if (e.target.checked) {
             setTheme("dark");
         }
         else {
@@ -15,11 +15,25 @@ const Navbar = () => {
 
 
     }
-    useEffect(()=>{
-        localStorage.setItem("theme",theme);
+    useEffect(() => {
+        localStorage.setItem("theme", theme);
         const localTheme = localStorage.getItem("theme");
-        document.querySelector("html").setAttribute("data-theme",localTheme); 
-    },[theme])
+        document.querySelector("html").setAttribute("data-theme", localTheme);
+    }, [theme]);
+     // Define colors for light mode
+     const lightModeColors = {
+        journey: "#1DD100",
+        junction: "#FF7F50"
+    };
+
+    // Define colors for dark mode
+    const darkModeColors = {
+        journey: "#FFD700",
+        junction: "#00BFFF"
+    };
+
+    // Choose colors based on mode
+    const colors = theme === "dark" ? darkModeColors : lightModeColors;
 
     const { logout, user, disName, photoLink } = useAuth();
     const [menuOpen, setMenuOpen] = useState(false);
@@ -80,7 +94,11 @@ const Navbar = () => {
                         </ul>
                     )}
                 </div>
-                <Link to='/' className="btn btn-ghost font-bold normal-case text-3xl"><FaBuilding /><span className="text-[#1DD100] "> JourneyJunction</span></Link>
+                <Link to='/' className="btn btn-ghost font-bold normal-case text-3xl">
+
+                    <span style={{ color: theme === "dark" ? colors.journey : lightModeColors.journey }}>Journey</span>
+                    <span style={{ color: theme === "dark" ? colors.junction : lightModeColors.junction }}>Junction</span>
+                </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -109,9 +127,9 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <label className="swap swap-rotate">
+            <label className="swap swap-rotate mr-4">
 
-                   
+
                     <input type="checkbox" onChange={handleToggle} />
 
                     {/* sun icon */}

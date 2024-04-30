@@ -12,7 +12,7 @@ const UpdateSpotDetails = () => {
     const [spot,setSpot]=useState({});
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/singleSpot/${id}`)
+        fetch(`https://journey-junction-server-gamma.vercel.app/singleSpot/${id}`)
         .then(res =>res.json())
         .then(data =>{
             setSpot(data)
@@ -39,7 +39,7 @@ const UpdateSpotDetails = () => {
         const updatedTourSpot = { tourists_spot_name, country_name, location, average_cost, seasonality, travel_time, photo,totalVisitorsPerYear,email ,name,short_description};
         console.log(updatedTourSpot);
 
-        fetch(`http://localhost:5000/updateTourSpot/${id}`,{
+        fetch(`https://journey-junction-server-gamma.vercel.app/updateTourSpot/${id}`,{
             method:'PUT',
             // ki dhoroner data send krbo tar jnno headers use krte hoy
             headers: {

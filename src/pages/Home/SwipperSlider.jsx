@@ -2,10 +2,12 @@
 // import img5 from '../../assets/img5.jpg';
 // import img7 from '../../assets/img7.jpg';
 // import img8 from '../../assets/img8.jpg';
-import img9 from '../../assets/Komodo National Park.webp'
-import img10 from '../../assets/Cameron Highlands.jpg'
+import img9 from '../../assets/Siem Reap2.webp'
+import img10 from '../../assets/borobudur_sunrise.jpg'
 import img11 from '../../assets/Chiang Mai2.webp'
 import img12 from '../../assets/Chiang Mai.jpg'
+// import img13 from '../../assets/Chiang Mai.jpg'
+
 
 
 
@@ -26,8 +28,22 @@ const SwipperSlider = () => {
   //   Aos.init({duration:2000,disable: 'mobile'})
   // },[])
   return (
-    
-    <Swiper
+    <>
+
+<style>
+        {`
+          .swiper-button-prev,
+          .swiper-button-next {
+            color: white; /* Change the color of the arrows */
+          }
+
+          .swiper-pagination-bullet {
+            background-color: blue; /* Change the background color of the dots */
+          }
+        `}
+      </style>
+
+      <Swiper
       modules={[Navigation, Pagination, Scrollbar, A11y, EffectFade]}
       spaceBetween={50}
       effect="fade"
@@ -92,6 +108,9 @@ const SwipperSlider = () => {
       </SwiperSlide>
 
     </Swiper>
+    
+    </>
+    
   );
 };
 
