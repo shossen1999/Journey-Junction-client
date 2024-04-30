@@ -1,4 +1,5 @@
 
+import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router-dom';
 
 const CountryCard = ({ item }) => {
@@ -12,6 +13,9 @@ const CountryCard = ({ item }) => {
 
     return (
       <>
+       <Helmet>
+            <title>Country |Country Card</title>
+            </Helmet>
           <div
             onClick={() => handleCountryCard(country_name)}
             className="w-full md:max-w-xs lg:max-w-xs p-6 rounded-md shadow-md bg-gray-900 dark:bg-gray-50 text-gray-50 dark:text-gray-900">

@@ -1,5 +1,6 @@
 import Swal from "sweetalert2";
 import useAuth from "../../hooks/useAuth";
+import { Helmet } from "react-helmet";
 
 
 const AddTouristsSpot = () => {
@@ -46,7 +47,7 @@ const AddTouristsSpot = () => {
                         icon: 'success',
                         confirmButtonText: 'Cool'
                     });
-                    // form.reset();
+                    form.reset();
                 }
             })
 
@@ -55,7 +56,12 @@ const AddTouristsSpot = () => {
 
     }
     return (
+        
+        
         <div className="bg-[#F4F3F0] p-24">
+            <Helmet>
+            <title>Add Tourist Spot</title>
+            </Helmet>
             <h2 className="text-3xl font-extrabold">Add A Tourist Spot </h2>
 
             <form onSubmit={handleAddTouristsSpot} className="card-body">

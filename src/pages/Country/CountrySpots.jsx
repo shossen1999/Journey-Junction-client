@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import SpotCard from "./SpotCard";
+import { Helmet } from "react-helmet";
 
 
 const CountrySpots = () => {
@@ -14,6 +15,9 @@ const CountrySpots = () => {
         })
     return (
         <div>
+             <Helmet>
+            <title>Country | Country Spot</title>
+            </Helmet>
             <div className="text-center mt-10 mb-10">
                 <h1 className="mb-5  font-bold text-3xl text-center">{country_name} Tourist Spots</h1>
                 <p className="md:w-[736px] lg:w-[736px] w-[500px] mx-auto">

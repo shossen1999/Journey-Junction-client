@@ -2,6 +2,7 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
 
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 
 const Navbar = () => {
     const [theme, setTheme] = useState(localStorage.getItem("theme") ? localStorage.getItem("theme") : "light");
@@ -63,6 +64,9 @@ const Navbar = () => {
 
     return (
         <div className="navbar bg-base-100 relative z-[10]">
+             <Helmet>
+            <title>Navbar</title>
+            </Helmet>
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden" onClick={toggleMenu}>

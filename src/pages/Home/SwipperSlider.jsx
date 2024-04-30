@@ -19,6 +19,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { EffectFade } from 'swiper/modules';
+import { Helmet } from 'react-helmet';
 // import Aos from 'aos'
 // import 'aos/dist/aos.css'
 
@@ -29,6 +30,9 @@ const SwipperSlider = () => {
   // },[])
   return (
     <>
+     <Helmet>
+            <title>Home | Swipper Slider</title>
+            </Helmet>
 
 <style>
         {`

@@ -1,4 +1,6 @@
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
+// import Country from './Country';
 
 
 const SpotCard = ({spot}) => {
@@ -6,6 +8,9 @@ const SpotCard = ({spot}) => {
     return (
         <div className="card  bg-base-100 shadow-xl mx-10 md:mx-5 lg:mx-5 border border-gray-200">
         <figure className="px-10 pt-10">
+        <Helmet>
+            <title>Country | SpotCard</title>
+            </Helmet>
             <img src={photo} className="rounded-2xl w-full h-[180px]" />
         </figure>
         <div className="card-body">

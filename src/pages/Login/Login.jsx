@@ -5,6 +5,7 @@ import useAuth from "../../hooks/useAuth";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import SocialLogin from "./SocialLogin";
+import { Helmet } from "react-helmet";
 
 const Login = () => {
     const { signInUser } = useAuth();
@@ -43,6 +44,9 @@ const Login = () => {
            
             <div>
             <ToastContainer />
+            <Helmet>
+            <title>Login Page</title>
+            </Helmet>
                 <h3 className="text-3xl text-center">Please Login</h3>
                 <form onSubmit={handleSubmit(onSubmit)} className="card-body lg:w-1/2 mx-auto">
                     <div className="form-control">

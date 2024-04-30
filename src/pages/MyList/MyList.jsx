@@ -2,6 +2,7 @@ import { Link, useLoaderData } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import Swal from "sweetalert2";
 import { useState } from "react";
+import { Helmet } from "react-helmet";
 
 const MyList = () => {
     const { user } = useAuth();
@@ -52,6 +53,9 @@ const MyList = () => {
     return (
         <div>
             <h2>My List: {tourCart.length}</h2>
+            <Helmet>
+            <title>My List</title>
+            </Helmet>
             <div className="overflow-x-auto py-6 md:py-12 lg:py-12" style={{backgroundColor: "#f0f0f0" }}>
                 <table className="table table-xs " style={{ width: "100%", margin: 0 }}>
                     <thead>

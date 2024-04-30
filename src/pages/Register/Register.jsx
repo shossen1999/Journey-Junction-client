@@ -7,6 +7,7 @@ import useAuth from "../../hooks/useAuth";
 import { useState } from "react"; // Corrected import
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { updateProfile } from "firebase/auth";
+import { Helmet } from "react-helmet";
 const Register = () => {
     const { createUser } = useAuth();
     const [registerError, setRegisterError] = useState('');
@@ -67,6 +68,9 @@ const Register = () => {
 
             <div>
                 <ToastContainer />
+                <Helmet>
+            <title>Register </title>
+            </Helmet>
                 <h3 className="text-3xl text-center">Please Register</h3>
                 <form onSubmit={handleSubmit(onSubmit)} className="card-body lg:w-1/2 mx-auto">
                     <div className="form-control">

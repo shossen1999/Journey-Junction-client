@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet";
 
 
 const UpdateSpotDetails = () => {
@@ -58,7 +59,8 @@ const UpdateSpotDetails = () => {
                     text: 'Coffee Updated Successfully',
                     icon: 'success',
                     confirmButtonText: 'Cool'
-                  })
+                  });
+                  form.reset();
             }
         })
 
@@ -67,6 +69,9 @@ const UpdateSpotDetails = () => {
 
     return (
         <div className="bg-[#F4F3F0] p-24">
+             <Helmet>
+            <title>Update Spot Details</title>
+            </Helmet>
         <h2 className="text-3xl font-extrabold">Update Tourist Spot </h2>
 
         <form onSubmit={handleUpdateTouristsSpot} className="card-body">
