@@ -4,6 +4,8 @@ const HomeSpotCard = ({singleCard}) => {
     const {_id, tourists_spot_name,average_cost, seasonality, travel_time, photo,totalVisitorsPerYear}=singleCard;
     // console.log(singleCard);
     return (
+        <>
+            
         <div className="card  bg-base-100 shadow-xl mx-10 md:mx-5 lg:mx-5 border border-gray-200">
             <figure className="px-10 pt-10">
                 <img src={photo} className="rounded-2xl w-full h-[180px]" />
@@ -25,6 +27,9 @@ const HomeSpotCard = ({singleCard}) => {
                 </div>
             </div>
         </div>
+        
+        </>
+        
     
     );
 };
