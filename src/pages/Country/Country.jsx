@@ -17,7 +17,7 @@ const Country = () => {
     return (
         <div>
             <h2>Country Name:{country.length}</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-2">
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 md:gap-4 lg:gap-4">
                 {
                     country.map(item => <CountryCard key={item._id} item={item}></CountryCard>)
                 }

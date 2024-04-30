@@ -48,14 +48,14 @@ const MyList = () => {
             }
         });
     };
-
+    const rowColors = ["#f8d7da", "#d4edda", "#d1ecf1", "#fcedd8", "#f4d7da"];
     return (
         <div>
             <h2>My List: {tourCart.length}</h2>
-            <div className="overflow-x-auto">
-                <table className="table table-xs">
+            <div className="overflow-x-auto py-6 md:py-12 lg:py-12" style={{backgroundColor: "#f0f0f0" }}>
+                <table className="table table-xs " style={{ width: "100%", margin: 0 }}>
                     <thead>
-                        <tr>
+                        <tr style={{color:"black"}}>
                             <th></th>
                             <th>Tourist Spot Name</th>
                             <th>Country</th>
@@ -67,7 +67,7 @@ const MyList = () => {
                     </thead>
                     <tbody>
                         {myListCart.map((spot, index) => (
-                            <tr key={spot._id}>
+                            <tr key={spot._id} style={{color:"black",padding:"5px 0px",backgroundColor: rowColors[index % rowColors.length]}}>
                                 <td>{index + 1}</td>
                                 <td>{spot.tourists_spot_name}</td>
                                 <td>{spot.country_name}</td>
@@ -77,18 +77,18 @@ const MyList = () => {
                                    <Link to={`/updateSpot/${spot._id}`}>
                                    <button 
                                    
-                                   className="btn btn-primary" onClick={() => handleUpdate(spot._id)}>Update</button>
+                                   className="border-none rounded-[8px] py-2 px-2 bg-green-500 text-black font-medium" onClick={() => handleUpdate(spot._id)}>Update</button>
                                    
                                    </Link>
                                 </td>
                                 <td>
-                                    <button className="btn btn-secondary" onClick={() => handleDelete(spot._id)}>Delete</button>
+                                    <button className="border-none  rounded-[8px] py-2 px-2 bg-red-600 text-black font-medium" onClick={() => handleDelete(spot._id)}>Delete</button>
                                 </td>
                             </tr>
                         ))}
                     </tbody>
                     <tfoot>
-                        <tr>
+                        <tr style={{color:"black"}}>
                             <th></th>
                             <th>Tourist Spot Name</th>
                             <th>Country</th>
