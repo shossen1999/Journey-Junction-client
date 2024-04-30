@@ -60,10 +60,10 @@ const AddTouristsSpot = () => {
 
             <form onSubmit={handleAddTouristsSpot} className="card-body">
                 {/* form row1 */}
-                <div className="md:flex gap-5 ">
+                <div className="md:flex gap-5  ">
                     <div className="form-control md:w-1/2 ">
                         <label className="label">
-                            <span className="label-text">Tourists Spot Name</span>
+                            <span className="label-text ">Tourists Spot Name</span>
                         </label>
                         <input type="text" name="tourists_spot_name" placeholder="Tourists Spot Name" className="input input-bordered w-full" required />
                     </div>
