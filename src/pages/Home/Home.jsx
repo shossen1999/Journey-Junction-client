@@ -4,6 +4,8 @@ import SwipperSlider from "./SwipperSlider";
 import { Link, useLoaderData } from "react-router-dom";
 import HomeSpotCard from "./HomeSpotCard";
 import { Helmet } from "react-helmet";
+import FaqQuestion from "./FaqQuestion";
+// import FaqAskQuestion from "../FAQ/FaqAskQuestion";
 
 
 const Home = () => {
@@ -16,6 +18,8 @@ const Home = () => {
             <SwipperSlider></SwipperSlider>
             
             <Country></Country>
+            {/* <FaqAskQuestion></FaqAskQuestion> */}
+            <FaqQuestion></FaqQuestion>
 
             <div className="text-center mt-10 mb-10">
             <Helmet>

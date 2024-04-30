@@ -13,6 +13,8 @@ import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import PrivateRoute from './PrivateRoute';
 import UpdateProfile from "../pages/UpdateProfile/UpdateProfile";
 import UserProfile from "../pages/UserProfile/UserProfile";
+import FaqDetails from "../pages/Home/FaqDetails";
+// import FaqQuestion from "../pages/Home/FaqQuestion";
 const router = createBrowserRouter([
     {
       path: "/",
@@ -68,6 +70,11 @@ const router = createBrowserRouter([
           path:"/userProfile",
           element:<PrivateRoute><UserProfile></UserProfile></PrivateRoute>
         },
+        {
+          path:"/faq",
+          element:<FaqDetails></FaqDetails>
+
+        }
       ]
     },
   ]);
