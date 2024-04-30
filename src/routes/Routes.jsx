@@ -11,6 +11,8 @@ import UpdateSpotDetails from "../pages/UpdateSpotDetails/UpdateSpotDetails";
 import CountrySpots from "../pages/Country/CountrySpots";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import PrivateRoute from './PrivateRoute';
+import UpdateProfile from "../pages/UpdateProfile/UpdateProfile";
+import UserProfile from "../pages/UserProfile/UserProfile";
 const router = createBrowserRouter([
     {
       path: "/",
@@ -57,7 +59,15 @@ const router = createBrowserRouter([
         {
           path:"/countrySpot/:country_name",
           element:<CountrySpots></CountrySpots>
-        }
+        },
+        {
+          path:"/updateProfile",
+          element:<PrivateRoute><UpdateProfile></UpdateProfile></PrivateRoute>
+        },
+        {
+          path:"/userProfile",
+          element:<PrivateRoute><UserProfile></UserProfile></PrivateRoute>
+        },
       ]
     },
   ]);

@@ -95,6 +95,16 @@ const Navbar = () => {
                                     isActive ? 'text-[#23BE0A] font-semibold text-[18px]' : 'font-semibold text-[18px] '
                                 }
                                 to="/allTouristsSpot">All Tourists Spot</NavLink></li>
+                                <li onClick={handleRouteClick}><NavLink
+                                className={({ isActive }) =>
+                                    isActive ? 'text-[#23BE0A] font-semibold text-[18px]' : 'font-semibold text-[18px] '
+                                }
+                                to="/updateProfile">Update Profile</NavLink></li>
+                            <li onClick={handleRouteClick}><NavLink
+                                className={({ isActive }) =>
+                                    isActive ? 'text-[#23BE0A] font-semibold text-[18px]' : 'font-semibold text-[18px] '
+                                }
+                                to="/userProfile">User Profile</NavLink></li>
                         </ul>
                     )}
                 </div>
@@ -127,6 +137,16 @@ const Navbar = () => {
                             isActive ? 'text-[#23BE0A] font-semibold text-[18px]' : 'font-semibold text-[18px] '
                         }
                         to="/allTouristsSpot">All Tourists Spot</NavLink></li>
+                         <li><NavLink
+                        className={({ isActive }) =>
+                            isActive ? 'text-[#23BE0A] font-semibold text-[18px]' : 'font-semibold text-[18px] '
+                        }
+                        to="/updateProfile">Update Profile</NavLink></li>
+                    <li><NavLink
+                        className={({ isActive }) =>
+                            isActive ? 'text-[#23BE0A] font-semibold text-[18px]' : 'font-semibold text-[18px] '
+                        }
+                        to="/userProfile">User Profile</NavLink></li>
 
                 </ul>
             </div>
