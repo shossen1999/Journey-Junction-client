@@ -8,7 +8,7 @@ const ReviewDetails = () => {
   
 
     useEffect(() =>{
-        fetch(`http://localhost:5000/review/${id}`)
+        fetch(`https://journey-junction-server-gamma.vercel.app/review/${id}`)
         .then(res => res.json())
         .then(data => {
             setReview(data)

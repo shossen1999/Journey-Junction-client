@@ -4,10 +4,10 @@ import { Helmet } from 'react-helmet';
 
 const ReviewCard = () => {
     const [review, setReview] = useState([]);
-    // const [showAll, setShowAll] = useState(false);
-
+    
+// https://journey-junction-server-gamma.vercel.app
     useEffect(() => {
-        fetch('http://localhost:5000/review')
+        fetch('https://journey-junction-server-gamma.vercel.app/review')
             .then((res) => res.json())
             .then((data) => {
                 setReview(data);
@@ -17,9 +17,6 @@ const ReviewCard = () => {
                 console.error("Error fetching data: ", error);
             });
     }, []);
-
-    
-
     const  reviewCards= review.slice(0, 6);
     return (
         <div>
@@ -29,7 +26,7 @@ const ReviewCard = () => {
             </Helmet> */}
                 <h1 className="mb-5  font-bold text-3xl">Our Reviews</h1>
                 <p className="md:w-[736px] lg:w-[736px] w-[500px] mx-auto">
-                    JourneyJunction , an innovative tourism website designed to be your ultimate companion in exploring the world's most captivating destinations. With a user-friendly interface and a wealth of information at your fingertips
+                DiscoveringDestinations stands out as an exceptional resource for travelers, offering unparalleled guidance and insights to enhance their adventures around the world.
                 </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6">
