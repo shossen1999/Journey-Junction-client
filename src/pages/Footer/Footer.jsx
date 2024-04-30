@@ -18,7 +18,7 @@ const Footer = () => {
                 </nav>
                 
                 <div className="text-center mt-8">
-                    <p className="text-sm">Copyright © 2023 - All rights reserved by Nestopia</p>
+                    <p className="text-sm">Copyright © 2023 - All rights reserved by JourneyJunction</p>
                 </div>
             </footer>
         </>

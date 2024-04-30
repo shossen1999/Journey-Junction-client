@@ -16,5 +16,22 @@ B9 A10 Type-01 Requirements
 
 * CRUD Operations and Database Integration: It integrates CRUD operations to manage tourist spot data efficiently, allowing users to add, view, update, and delete tourist spots while ensuring data integrity and security through database integration.
 
+* Data theme : I have been used data theme in here . Only Dark theme and light theme i have been applied in my website .
+
+* Update Profile : There is a route where user can update their profile.
+* User Profile : In User profile section, user can see their active user profile .And also there i have been added update option so that user can easily reach their profile section.
+* Add Tourist Spot : In this section i kept a route where user can add spot if he/she login to the site.
+* All Tourist Spot :Here any viewer can see all the tourist spot added in the website till right now whether he/she is in login phase or logout phase .
+
+* My List page : In this  page user can only see he/she added the tourist spot earlier .
+
+* FAQ page : Any user without login can see this section ,all the most relatively asked question.
+* Review Section : In this section , we kept all the review been published by the user .
+
+# Package Used 
+
+* React-tooltip
+* 
+
 
 
