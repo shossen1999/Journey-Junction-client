@@ -14,6 +14,7 @@ import PrivateRoute from './PrivateRoute';
 import UpdateProfile from "../pages/UpdateProfile/UpdateProfile";
 import UserProfile from "../pages/UserProfile/UserProfile";
 import FaqDetails from "../pages/Home/FaqDetails";
+import ReviewDetails from "../pages/Home/ReviewDetails";
 // import FaqQuestion from "../pages/Home/FaqQuestion";
 const router = createBrowserRouter([
     {
@@ -74,6 +75,11 @@ const router = createBrowserRouter([
           path:"/faq",
           element:<FaqDetails></FaqDetails>
 
+        },
+        
+        {
+          path: "/review/:id",
+          element: <ReviewDetails></ReviewDetails>
         }
       ]
     },

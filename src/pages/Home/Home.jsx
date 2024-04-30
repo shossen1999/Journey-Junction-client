@@ -5,6 +5,7 @@ import { Link, useLoaderData } from "react-router-dom";
 import HomeSpotCard from "./HomeSpotCard";
 import { Helmet } from "react-helmet";
 import FaqQuestion from "./FaqQuestion";
+import ReviewCard from "./ReviewCard";
 // import FaqAskQuestion from "../FAQ/FaqAskQuestion";
 
 
@@ -42,6 +43,8 @@ const Home = () => {
                     <button className="btn btn-primary max-w-96" style={{ width: "200px" }}>See More</button>
                 </Link>
             </div>
+
+            <ReviewCard></ReviewCard>
 
 
         </div>
